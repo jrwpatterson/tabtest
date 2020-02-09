@@ -36,4 +36,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Thoughts on the Project
 
-I didn't get to do tests which I would have loved to as I was learning vue and I didn't have time to also learn how to write tests.
+I implemented some tests to show how I would do it.

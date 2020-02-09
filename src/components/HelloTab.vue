@@ -2,11 +2,20 @@
   <div class="container">
     <div>Results</div>
     <div class="ball-container" v-if="powerData.PrimaryNumbers.length">
-      <Balls v-bind:key="item" v-for="item in powerData.PrimaryNumbers" v-bind:value="item" />
-      <Balls v-bind:value="powerData.SecondaryNumbers[0]" v-bind:isPowerBall="true" />
+      <Balls
+        v-bind:key="item"
+        v-for="item in powerData.PrimaryNumbers"
+        v-bind:value="item"
+      />
+      <Balls
+        v-bind:value="powerData.SecondaryNumbers[0]"
+        v-bind:isPowerBall="true"
+      />
     </div>
     <div v-else>
-      <button @click="dataFetch">Auto Fill Results</button>
+      <button data-testid="get.results" @click="dataFetch">
+        Auto Fill Results
+      </button>
       no data
     </div>
 
@@ -37,9 +46,6 @@ export default Vue.extend({
         SecondaryNumbers: []
       }
     };
-  },
-  mounted: function() {
-    // this.dataFetch();
   },
   components: {
     Balls,
